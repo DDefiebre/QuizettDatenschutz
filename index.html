@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutzerklärung</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            font-size: 14px;
+            margin: 0;
+            padding: 20px;
+            background-color: #fff;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: #1a1a1a;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 15px;
+        }
+        h2 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 35px;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        h3 {
+            font-size: 15px;
+            font-weight: 600;
+            margin-top: 20px;
+            margin-bottom: 8px;
+            color: #444;
+        }
+        p {
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        ul {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        strong {
+            font-weight: 600;
+            color: #000;
+        }
+        .legal-note {
+            font-size: 12px;
+            color: #888;
+            margin-top: 50px;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Datenschutzerklärung – [APP-NAME]</h1>
+
+    <p>Diese Datenschutzerklärung informiert Sie über die Verarbeitung Ihrer personenbezogenen Daten bei der Nutzung der mobilen Anwendung <strong>[APP-NAME]</strong> (nachfolgend „App") gemäß der Datenschutz-Grundverordnung (DSGVO).</p>
+
+    <h2>1. Verantwortlicher</h2>
+    <p>Verantwortlich für die Datenverarbeitung im Sinne der DSGVO ist:</p>
+    <p>
+        <strong>GuruSense UG (haftungsbeschränkt)</strong><br>
+        Vertreten durch: Daniel Defiebre<br>
+        Eichelsheimer Straße 5<br>
+        68163 Mannheim<br>
+        Deutschland<br>
+        <br>
+        E-Mail: <a href="mailto:daniel.defiebre@gurusense.de">daniel.defiebre@gurusense.de</a><br>
+        Handelsregister: HRB 753579 (Registergericht Mannheim)
+    </p>
+
+    <h2>2. Übersicht der Verarbeitungstätigkeiten und Rechtsgrundlagen</h2>
+    <p>Wir verarbeiten Ihre personenbezogenen Daten für folgende Zwecke auf folgenden Rechtsgrundlagen:</p>
+    <ul>
+        <li><strong>Benutzerkonto und Login (Firebase Authentication):</strong> Verarbeitung Ihrer Registrierungsdaten (E-Mail-Adresse, Benutzer-ID, ggf. Anbieter-Token bei Login via Apple/Google) zur Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO).</li>
+        <li><strong>Profil, Spielfortschritt und Bestenliste (Firestore):</strong> Speicherung Ihres Spielernamens, Avatars, erreichter Punkte, Spielstatistiken und Ranglisten-Position zur Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO).</li>
+        <li><strong>Multiplayer / Duelle:</strong> Verarbeitung von Spieldaten (Gegnerzuordnung, Spielzüge, Ergebnisse) zur Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO).</li>
+        <li><strong>Analyse des Nutzungsverhaltens (Firebase Analytics):</strong> Auf Basis Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).</li>
+        <li><strong>Absturzberichte (Firebase Crashlytics):</strong> Auf Basis unseres berechtigten Interesses an der Erkennung und Behebung technischer Fehler (Art. 6 Abs. 1 lit. f DSGVO).</li>
+    </ul>
+
+    <h2>3. Datenspeicherung und Hosting (Serverstandort Deutschland/EU)</h2>
+    <p>
+        Wir nutzen für den Betrieb der App die Infrastruktur der <strong>Google Cloud Platform</strong> sowie <strong>Google Firebase</strong>.
+    </p>
+    <p>
+        <strong>Standortbindung:</strong> Wir haben unsere Systeme technisch so konfiguriert, dass die dauerhafte Speicherung Ihrer personenbezogenen Daten (Firestore-Datenbank, Account-Daten) ausschließlich in Rechenzentren in der <strong>Europäischen Union</strong> (Region <code>europe-west3</code>, Frankfurt am Main) erfolgt.
+    </p>
+    <p>
+        Verantwortlicher Anbieter der Cloud-Dienste ist Google Cloud EMEA Ltd. (Irland). Es besteht ein Vertrag zur Auftragsverarbeitung (Cloud Data Processing Addendum) gemäß Art. 28 DSGVO, der den Schutz Ihrer Daten nach europäischen Standards sicherstellt.
+    </p>
+
+    <h2>4. Im Einzelnen verarbeitete Daten</h2>
+
+    <h3>4.1. Registrierung und Login (Firebase Authentication)</h3>
+    <p>Bei der Registrierung erheben wir folgende Daten:</p>
+    <ul>
+        <li>E-Mail-Adresse</li>
+        <li>Passwort (verschlüsselt gespeichert durch Firebase Authentication, für uns nicht einsehbar)</li>
+        <li>Bei Login via „Sign in with Apple" oder „Sign in with Google": die vom Anbieter übermittelte ID und ggf. die hinterlegte E-Mail-Adresse</li>
+        <li>Benutzer-ID (User-UID), automatisch von Firebase erzeugt</li>
+        <li>Zeitpunkt der Registrierung und des letzten Logins</li>
+    </ul>
+    <p><strong>Rechtsgrundlage:</strong> Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO).</p>
+
+    <h3>4.2. Profil, Spielfortschritt und Bestenliste (Cloud Firestore)</h3>
+    <p>In der Datenbank speichern wir:</p>
+    <ul>
+        <li>Selbst gewählter Spielername / Nickname</li>
+        <li>Avatar / Profilbild (sofern von Ihnen ausgewählt)</li>
+        <li>Spielfortschritt, gespielte Runden, Punktestand, Erfolge</li>
+        <li>Ranglisten-Position (Bestenliste)</li>
+    </ul>
+    <p>
+        <strong>Sichtbarkeit für andere Nutzer:</strong> Ihr Spielername, Ihr Avatar und Ihre Punktzahl sind in der öffentlichen Bestenliste sowie für Mitspieler in Duellen sichtbar. Ihre E-Mail-Adresse ist <strong>niemals</strong> für andere Nutzer sichtbar. Wir empfehlen, als Spielername keinen Klarnamen zu verwenden, wenn Sie pseudonym bleiben möchten.
+    </p>
+    <p><strong>Rechtsgrundlage:</strong> Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO).</p>
+
+    <h3>4.3. Multiplayer und Duelle</h3>
+    <p>Für die Durchführung von Duellen und Multiplayer-Partien verarbeiten wir:</p>
+    <ul>
+        <li>Zuordnung von Gegnerinnen und Gegnern (Matchmaking)</li>
+        <li>Spielzüge und Antworten innerhalb einer Partie</li>
+        <li>Ergebnisse und Spielverlauf</li>
+    </ul>
+    <p>Die Spielzüge sind nur für die jeweiligen Teilnehmer einer Partie sichtbar.</p>
+    <p><strong>Rechtsgrundlage:</strong> Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO).</p>
+
+    <h2>5. Analyse des Nutzungsverhaltens (Tracking)</h2>
+
+    <h3>5.1. Firebase Analytics</h3>
+    <p>
+        Wir nutzen <strong>Firebase Analytics</strong>, um zu verstehen, wie die App genutzt wird (z.B. welche Funktionen häufig genutzt werden, an welcher Stelle Nutzer aussteigen). Erfasst werden insbesondere:
+    </p>
+    <ul>
+        <li>Pseudonyme App-Instanz-ID</li>
+        <li>Geräte-Informationen (Modell, Betriebssystem-Version, App-Version)</li>
+        <li>Sprache, ungefähre Region (auf Länderebene)</li>
+        <li>Nutzungsereignisse (z.B. Spielstart, Spielende, Bildschirmaufrufe)</li>
+    </ul>
+    <p>
+        IP-Adressen werden von Firebase nur kurzfristig zur Geo-Lokalisierung auf Länderebene verarbeitet und nicht dauerhaft gespeichert. Wir übermitteln <strong>keine</strong> personenbezogenen Inhalte (E-Mail, Klarname o.ä.) an Firebase Analytics.
+    </p>
+    <p>
+        <strong>Rechtsgrundlage:</strong> Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Sie werden beim ersten Start der App über einen Consent-Dialog um Einwilligung gebeten und können diese jederzeit in den App-Einstellungen widerrufen.
+    </p>
+
+    <h3>5.2. Firebase Crashlytics</h3>
+    <p>
+        <strong>Firebase Crashlytics</strong> erfasst automatisch Absturzberichte, um Fehler in der App schnell beheben zu können. Erfasst werden:
+    </p>
+    <ul>
+        <li>Pseudonyme Installations-ID</li>
+        <li>Gerätetyp und Betriebssystem-Version</li>
+        <li>App-Version und Stacktrace zum Zeitpunkt des Absturzes</li>
+        <li>Anonymisierte technische Statusinformationen</li>
+    </ul>
+    <p><strong>Rechtsgrundlage:</strong> Berechtigtes Interesse an der technischen Stabilität der App (Art. 6 Abs. 1 lit. f DSGVO).</p>
+
+    <h2>6. Speicherdauer und Löschung</h2>
+    <p>Wir speichern Ihre Daten nur so lange, wie es für den jeweiligen Zweck erforderlich ist:</p>
+    <ul>
+        <li><strong>Benutzerkonto und Profil:</strong> Löschung bei Kontolöschung durch Sie oder automatisch nach <strong>24 Monaten Inaktivität</strong>.</li>
+        <li><strong>Spielfortschritt und Statistiken:</strong> Werden mit dem Konto gelöscht.</li>
+        <li><strong>Bestenliste:</strong> Nach Kontolöschung wird Ihr Eintrag entfernt bzw. anonymisiert.</li>
+        <li><strong>Multiplayer-Spielverläufe:</strong> Automatische Löschung nach <strong>90 Tagen</strong>.</li>
+        <li><strong>Firebase Analytics:</strong> Automatische Löschung nach <strong>14 Monaten</strong>.</li>
+        <li><strong>Firebase Crashlytics:</strong> Automatische Löschung nach <strong>90 Tagen</strong>.</li>
+    </ul>
+    <p>
+        Sie können Ihr Benutzerkonto jederzeit innerhalb der App unter „Einstellungen → Konto löschen" selbst löschen. Alternativ genügt eine formlose Mitteilung an <a href="mailto:daniel.defiebre@gurusense.de">daniel.defiebre@gurusense.de</a>.
+    </p>
+
+    <h2>7. Auftragsverarbeiter und Empfänger</h2>
+    <p>Zur Erbringung unserer Dienste setzen wir folgende Auftragsverarbeiter ein, mit denen jeweils ein Vertrag zur Auftragsverarbeitung gemäß Art. 28 DSGVO geschlossen wurde:</p>
+    <ul>
+        <li><strong>Google Cloud / Google LLC</strong> (USA, zertifiziert unter dem EU-US Data Privacy Framework) – Cloud-Hosting, Firebase Authentication, Cloud Firestore, Firebase Analytics, Firebase Crashlytics. Datenspeicherung in der EU (Frankfurt am Main).</li>
+    </ul>
+    <p>Eine darüber hinausgehende Weitergabe Ihrer personenbezogenen Daten an Dritte findet nicht statt, es sei denn, wir sind gesetzlich dazu verpflichtet.</p>
+
+    <h2>8. Datenübermittlung in Drittländer</h2>
+    <p>
+        Die Speicherung Ihrer personenbezogenen Daten erfolgt in Rechenzentren innerhalb der <strong>Europäischen Union</strong>. Da Google LLC ein US-amerikanisches Unternehmen ist, kann jedoch in Ausnahmefällen (z.B. technischer Support, Administration) ein Zugriff aus den USA technisch nicht vollständig ausgeschlossen werden.
+    </p>
+    <p>
+        Für diesen Fall stützen wir uns auf folgende Garantien:
+    </p>
+    <ul>
+        <li><strong>EU-US Data Privacy Framework (DPF):</strong> Google LLC ist unter dem EU-US Data Privacy Framework zertifiziert, für das ein Angemessenheitsbeschluss der EU-Kommission gemäß Art. 45 DSGVO besteht.</li>
+        <li><strong>EU-Standardvertragsklauseln (SCCs):</strong> Ergänzend sind im Google Cloud Data Processing Addendum EU-Standardvertragsklauseln gemäß Art. 46 Abs. 2 lit. c DSGVO enthalten.</li>
+    </ul>
+
+    <h2>9. Nutzung durch Minderjährige</h2>
+    <p>
+        Die App ist für Nutzer ab <strong>13 Jahren</strong> bestimmt. Personen unter 16 Jahren benötigen für die Erteilung der Einwilligung in die Verarbeitung ihrer Daten (insb. für Analytics) gemäß Art. 8 DSGVO die Zustimmung der Erziehungsberechtigten. Mit der Nutzung der App bestätigen Sie, dass Sie mindestens 16 Jahre alt sind oder die Zustimmung Ihrer Erziehungsberechtigten eingeholt haben.
+    </p>
+
+    <h2>10. Ihre Rechte als betroffene Person</h2>
+    <p>Sie haben gemäß DSGVO folgende Rechte bezüglich Ihrer personenbezogenen Daten:</p>
+    <ul>
+        <li><strong>Recht auf Auskunft (Art. 15 DSGVO)</strong></li>
+        <li><strong>Recht auf Berichtigung (Art. 16 DSGVO)</strong></li>
+        <li><strong>Recht auf Löschung (Art. 17 DSGVO)</strong></li>
+        <li><strong>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)</strong></li>
+        <li><strong>Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</strong></li>
+        <li><strong>Widerspruchsrecht (Art. 21 DSGVO):</strong> Soweit wir Daten auf Basis unseres berechtigten Interesses verarbeiten (z.B. Crashlytics), können Sie jederzeit Widerspruch einlegen.</li>
+        <li><strong>Recht auf Widerruf der Einwilligung (Art. 7 Abs. 3 DSGVO):</strong> Sie können Ihre Einwilligung zu Analytics jederzeit mit Wirkung für die Zukunft in den App-Einstellungen oder per E-Mail an <a href="mailto:daniel.defiebre@gurusense.de">daniel.defiebre@gurusense.de</a> widerrufen.</li>
+    </ul>
+    <p>
+        Zur Geltendmachung Ihrer Rechte genügt eine formlose E-Mail an <a href="mailto:daniel.defiebre@gurusense.de">daniel.defiebre@gurusense.de</a>.
+    </p>
+
+    <h2>11. Beschwerderecht bei der Aufsichtsbehörde</h2>
+    <p>
+        Wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer personenbezogenen Daten gegen die DSGVO verstößt, haben Sie das Recht, eine Beschwerde bei einer Datenschutz-Aufsichtsbehörde einzulegen (Art. 77 DSGVO). Die für uns zuständige Aufsichtsbehörde ist:
+    </p>
+    <p>
+        <strong>Der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Baden-Württemberg</strong><br>
+        Lautenschlagerstraße 20<br>
+        70173 Stuttgart<br>
+        <a href="https://www.baden-wuerttemberg.datenschutz.de" target="_blank">www.baden-wuerttemberg.datenschutz.de</a>
+    </p>
+
+    <h2>12. Änderungen dieser Datenschutzerklärung</h2>
+    <p>
+        Wir behalten uns vor, diese Datenschutzerklärung anzupassen, um sie an geänderte Rechtslagen oder bei Änderungen des Dienstes anzupassen. Die jeweils aktuelle Fassung finden Sie stets in der App und auf unserer Website.
+    </p>
+
+    <p class="legal-note">Stand: 18.05.2026</p>
+
+</body>
+</html>
