@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datenschutzerklärung</title>
+    <title>Datenschutzerklärung – QuizYou</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -71,9 +72,9 @@
 </head>
 <body>
 
-    <h1>Datenschutzerklärung – [Quizett]</h1>
+    <h1>Datenschutzerklärung – QuizYou</h1>
 
-    <p>Diese Datenschutzerklärung informiert Sie über die Verarbeitung Ihrer personenbezogenen Daten bei der Nutzung der mobilen Anwendung <strong>[APP-NAME]</strong> (nachfolgend „App") gemäß der Datenschutz-Grundverordnung (DSGVO).</p>
+    <p>Diese Datenschutzerklärung informiert Sie über die Verarbeitung Ihrer personenbezogenen Daten bei der Nutzung der mobilen Anwendung <strong>QuizYou</strong> (nachfolgend „App") gemäß der Datenschutz-Grundverordnung (DSGVO).</p>
 
     <h2>1. Verantwortlicher</h2>
     <p>Verantwortlich für die Datenverarbeitung im Sinne der DSGVO ist:</p>
@@ -91,10 +92,11 @@
     <h2>2. Übersicht der Verarbeitungstätigkeiten und Rechtsgrundlagen</h2>
     <p>Wir verarbeiten Ihre personenbezogenen Daten für folgende Zwecke auf folgenden Rechtsgrundlagen:</p>
     <ul>
-        <li><strong>Benutzerkonto und Login (Firebase Authentication):</strong> Verarbeitung Ihrer Registrierungsdaten (E-Mail-Adresse, Benutzer-ID, ggf. Anbieter-Token bei Login via Apple/Google) zur Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO).</li>
+        <li><strong>Anonyme Nutzung und optionales Benutzerkonto (Firebase Authentication):</strong> Die App legt beim ersten Start automatisch ein anonymes, pseudonymes Nutzerkonto an, damit Spielstände und Online-Duelle funktionieren. Optional können Sie dieses Konto mit „Sign in with Apple" oder „Sign in with Google" verknüpfen. Rechtsgrundlage: Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO).</li>
         <li><strong>Profil, Spielfortschritt und Bestenliste (Firestore):</strong> Speicherung Ihres Spielernamens, Avatars, erreichter Punkte, Spielstatistiken und Ranglisten-Position zur Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO).</li>
         <li><strong>Multiplayer / Duelle:</strong> Verarbeitung von Spieldaten (Gegnerzuordnung, Spielzüge, Ergebnisse) zur Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO).</li>
-        <li><strong>Analyse des Nutzungsverhaltens (Firebase Analytics):</strong> Auf Basis Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).</li>
+        <li><strong>In-App-Käufe und Freischaltung gekaufter Inhalte (RevenueCat):</strong> Verarbeitung von Kaufbelegen und Freischaltungsstatus zur Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO).</li>
+        <li><strong>Analyse des Nutzungsverhaltens (Firebase Analytics, Amplitude):</strong> Auf Basis Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).</li>
         <li><strong>Absturzberichte (Firebase Crashlytics):</strong> Auf Basis unseres berechtigten Interesses an der Erkennung und Behebung technischer Fehler (Art. 6 Abs. 1 lit. f DSGVO).</li>
     </ul>
 
@@ -103,7 +105,7 @@
         Wir nutzen für den Betrieb der App die Infrastruktur der <strong>Google Cloud Platform</strong> sowie <strong>Google Firebase</strong>.
     </p>
     <p>
-        <strong>Standortbindung:</strong> Wir haben unsere Systeme technisch so konfiguriert, dass die dauerhafte Speicherung Ihrer personenbezogenen Daten (Firestore-Datenbank, Account-Daten) ausschließlich in Rechenzentren in der <strong>Europäischen Union</strong> (Region <code>europe-west3</code>, Frankfurt am Main) erfolgt.
+        <strong>Standortbindung:</strong> Wir haben unsere Systeme technisch so konfiguriert, dass die dauerhafte Speicherung Ihrer personenbezogenen Daten (Firestore-Datenbank, Account-Daten, Echtzeit-Datenbank für Duelle) ausschließlich in Rechenzentren in der <strong>Europäischen Union</strong> erfolgt (Regionen <code>europe-west3</code>, Frankfurt am Main, sowie <code>europe-west1</code>).
     </p>
     <p>
         Verantwortlicher Anbieter der Cloud-Dienste ist Google Cloud EMEA Ltd. (Irland). Es besteht ein Vertrag zur Auftragsverarbeitung (Cloud Data Processing Addendum) gemäß Art. 28 DSGVO, der den Schutz Ihrer Daten nach europäischen Standards sicherstellt.
@@ -111,15 +113,19 @@
 
     <h2>4. Im Einzelnen verarbeitete Daten</h2>
 
-    <h3>4.1. Registrierung und Login (Firebase Authentication)</h3>
-    <p>Bei der Registrierung erheben wir folgende Daten:</p>
+    <h3>4.1. Anonyme Nutzung und optionales Konto (Firebase Authentication)</h3>
+    <p>
+        Die App ist ohne Registrierung nutzbar. Beim ersten Start wird automatisch ein <strong>anonymes Konto</strong> angelegt, das ausschließlich aus einer zufällig erzeugten Benutzer-ID (User-UID) besteht. Personenbezogene Angaben wie Name oder E-Mail-Adresse werden dabei nicht erhoben.
+    </p>
+    <p>Wenn Sie Ihr Konto freiwillig mit einem Anbieter verknüpfen, verarbeiten wir zusätzlich:</p>
     <ul>
-        <li>E-Mail-Adresse</li>
-        <li>Passwort (verschlüsselt gespeichert durch Firebase Authentication, für uns nicht einsehbar)</li>
-        <li>Bei Login via „Sign in with Apple" oder „Sign in with Google": die vom Anbieter übermittelte ID und ggf. die hinterlegte E-Mail-Adresse</li>
+        <li>Bei „Sign in with Apple" oder „Sign in with Google": die vom Anbieter übermittelte ID und, sofern Sie dies nicht unterbinden, die hinterlegte E-Mail-Adresse</li>
         <li>Benutzer-ID (User-UID), automatisch von Firebase erzeugt</li>
-        <li>Zeitpunkt der Registrierung und des letzten Logins</li>
+        <li>Zeitpunkt der Anmeldung und des letzten Logins</li>
     </ul>
+    <p>
+        Der Zweck der Verknüpfung besteht darin, Ihren Spielfortschritt und gekaufte Inhalte auch nach einem Gerätewechsel oder einer Neuinstallation wiederherstellen zu können.
+    </p>
     <p><strong>Rechtsgrundlage:</strong> Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO).</p>
 
     <h3>4.2. Profil, Spielfortschritt und Bestenliste (Cloud Firestore)</h3>
@@ -145,6 +151,34 @@
     <p>Die Spielzüge sind nur für die jeweiligen Teilnehmer einer Partie sichtbar.</p>
     <p><strong>Rechtsgrundlage:</strong> Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO).</p>
 
+    <h3>4.4. In-App-Käufe (RevenueCat, Apple, Google)</h3>
+    <p>
+        In der App können Sie zusätzliche Fragen-Kategorien als einmaligen Kauf freischalten. Der Kaufvorgang selbst wird <strong>nicht von uns</strong> abgewickelt, sondern über die Zahlungssysteme der jeweiligen App-Store-Betreiber:
+    </p>
+    <ul>
+        <li><strong>Apple:</strong> Apple Distribution International Ltd., Hollyhill Industrial Estate, Cork, Irland</li>
+        <li><strong>Google:</strong> Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland</li>
+    </ul>
+    <p>
+        Diese Unternehmen sind für die Zahlungsabwicklung <strong>eigenständig Verantwortliche</strong> im Sinne der DSGVO. Ihre Zahlungsdaten (etwa Kreditkarten- oder Kontoinformationen) werden ausschließlich dort verarbeitet; wir erhalten sie zu keinem Zeitpunkt und können sie nicht einsehen. Es gelten insoweit die Datenschutzbestimmungen von Apple beziehungsweise Google.
+    </p>
+    <p>
+        Um zu erkennen, welche Inhalte Sie erworben haben, setzen wir den Dienst <strong>RevenueCat</strong> ein. Dabei werden verarbeitet:
+    </p>
+    <ul>
+        <li>Eine pseudonyme Kunden-Kennung (App User ID). Solange Sie kein Konto verknüpft haben, ist dies eine zufällig erzeugte, rein geräteseitige Kennung; nach einer Verknüpfung Ihre Firebase-Benutzer-ID</li>
+        <li>Kaufbelege und Transaktions-Kennungen des jeweiligen App Stores</li>
+        <li>Gekaufte Produkte, Kaufzeitpunkt und Freischaltungsstatus</li>
+        <li>Technische Angaben wie Plattform, App-Version und Land des Store-Kontos</li>
+    </ul>
+    <p>
+        Der Zweck ist die Prüfung der Kaufbelege und die Freischaltung der erworbenen Inhalte, auch nach einer Neuinstallation oder auf einem weiteren Gerät. <strong>Name, E-Mail-Adresse und Zahlungsdaten werden nicht an RevenueCat übermittelt.</strong>
+    </p>
+    <p>
+        Anbieter ist RevenueCat, Inc., 250 Sutter St, San Francisco, CA 94108, USA. Mit RevenueCat besteht ein Vertrag zur Auftragsverarbeitung gemäß Art. 28 DSGVO.
+    </p>
+    <p><strong>Rechtsgrundlage:</strong> Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO).</p>
+
     <h2>5. Analyse des Nutzungsverhaltens (Tracking)</h2>
 
     <h3>5.1. Firebase Analytics</h3>
@@ -155,16 +189,25 @@
         <li>Pseudonyme App-Instanz-ID</li>
         <li>Geräte-Informationen (Modell, Betriebssystem-Version, App-Version)</li>
         <li>Sprache, ungefähre Region (auf Länderebene)</li>
-        <li>Nutzungsereignisse (z.B. Spielstart, Spielende, Bildschirmaufrufe)</li>
+        <li>Nutzungsereignisse (z.B. Spielstart, Spielende, gespielte Runden)</li>
     </ul>
     <p>
-        IP-Adressen werden von Firebase nur kurzfristig zur Geo-Lokalisierung auf Länderebene verarbeitet und nicht dauerhaft gespeichert. Wir übermitteln <strong>keine</strong> personenbezogenen Inhalte (E-Mail, Klarname o.ä.) an Firebase Analytics.
+        IP-Adressen werden von Firebase nur kurzfristig zur Geo-Lokalisierung auf Länderebene verarbeitet und nicht dauerhaft gespeichert. Wir übermitteln <strong>keine</strong> personenbezogenen Inhalte (E-Mail, Klarname o.ä.) an Firebase Analytics. Die Werbe-ID (Advertising ID) wird von der App ausdrücklich <strong>nicht</strong> erhoben oder übertragen.
     </p>
     <p>
         <strong>Rechtsgrundlage:</strong> Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Sie werden beim ersten Start der App über einen Consent-Dialog um Einwilligung gebeten und können diese jederzeit in den App-Einstellungen widerrufen.
     </p>
 
-    <h3>5.2. Firebase Crashlytics</h3>
+    <h3>5.2. Amplitude</h3>
+    <p>
+        Ergänzend nutzen wir <strong>Amplitude</strong> zur Auswertung von Nutzungsereignissen. Die Verarbeitung erfolgt auf Servern in der <strong>Europäischen Union</strong> (EU-Rechenzentrum von Amplitude). Erfasst werden dieselben pseudonymen Ereignis- und Gerätedaten wie unter 5.1 beschrieben; personenbezogene Inhalte werden nicht übermittelt.
+    </p>
+    <p>
+        Anbieter ist Amplitude, Inc., 201 Third Street, San Francisco, CA 94103, USA. Es besteht ein Vertrag zur Auftragsverarbeitung gemäß Art. 28 DSGVO.
+    </p>
+    <p><strong>Rechtsgrundlage:</strong> Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), widerrufbar in den App-Einstellungen.</p>
+
+    <h3>5.3. Firebase Crashlytics</h3>
     <p>
         <strong>Firebase Crashlytics</strong> erfasst automatisch Absturzberichte, um Fehler in der App schnell beheben zu können. Erfasst werden:
     </p>
@@ -183,7 +226,9 @@
         <li><strong>Spielfortschritt und Statistiken:</strong> Werden mit dem Konto gelöscht.</li>
         <li><strong>Bestenliste:</strong> Nach Kontolöschung wird Ihr Eintrag entfernt bzw. anonymisiert.</li>
         <li><strong>Multiplayer-Spielverläufe:</strong> Automatische Löschung nach <strong>90 Tagen</strong>.</li>
+        <li><strong>Kaufdaten (RevenueCat):</strong> Speicherung für die Dauer der Gültigkeit des Kaufs. Da es sich um dauerhafte Einmalkäufe handelt, bleibt der Freischaltungsstatus grundsätzlich bestehen, damit Sie Ihre Käufe jederzeit wiederherstellen können. Auf Wunsch löschen wir die Zuordnung; die erworbenen Inhalte sind dann über die Wiederherstellungsfunktion des jeweiligen App Stores weiterhin abrufbar. Handels- und steuerrechtliche Aufbewahrungspflichten für den Kaufvorgang selbst obliegen Apple beziehungsweise Google.</li>
         <li><strong>Firebase Analytics:</strong> Automatische Löschung nach <strong>14 Monaten</strong>.</li>
+        <li><strong>Amplitude:</strong> Automatische Löschung nach <strong>24 Monaten</strong>.</li>
         <li><strong>Firebase Crashlytics:</strong> Automatische Löschung nach <strong>90 Tagen</strong>.</li>
     </ul>
     <p>
@@ -193,25 +238,33 @@
     <h2>7. Auftragsverarbeiter und Empfänger</h2>
     <p>Zur Erbringung unserer Dienste setzen wir folgende Auftragsverarbeiter ein, mit denen jeweils ein Vertrag zur Auftragsverarbeitung gemäß Art. 28 DSGVO geschlossen wurde:</p>
     <ul>
-        <li><strong>Google Cloud / Google LLC</strong> (USA, zertifiziert unter dem EU-US Data Privacy Framework) – Cloud-Hosting, Firebase Authentication, Cloud Firestore, Firebase Analytics, Firebase Crashlytics. Datenspeicherung in der EU (Frankfurt am Main).</li>
+        <li><strong>Google Cloud / Google LLC</strong> (USA, zertifiziert unter dem EU-US Data Privacy Framework) – Cloud-Hosting, Firebase Authentication, Cloud Firestore, Realtime Database, Firebase Analytics, Firebase Crashlytics. Datenspeicherung in der EU (Frankfurt am Main).</li>
+        <li><strong>RevenueCat, Inc.</strong> (USA) – Prüfung von Kaufbelegen und Verwaltung freigeschalteter Inhalte.</li>
+        <li><strong>Amplitude, Inc.</strong> (USA) – Auswertung von Nutzungsereignissen, Datenspeicherung im EU-Rechenzentrum.</li>
     </ul>
+    <p>
+        Daneben verarbeiten <strong>Apple Distribution International Ltd.</strong> und <strong>Google Ireland Limited</strong> im Rahmen der Zahlungsabwicklung von In-App-Käufen Daten als <em>eigenständig Verantwortliche</em>. Sie handeln insoweit nicht in unserem Auftrag; es gelten deren eigene Datenschutzbestimmungen.
+    </p>
     <p>Eine darüber hinausgehende Weitergabe Ihrer personenbezogenen Daten an Dritte findet nicht statt, es sei denn, wir sind gesetzlich dazu verpflichtet.</p>
 
     <h2>8. Datenübermittlung in Drittländer</h2>
     <p>
-        Die Speicherung Ihrer personenbezogenen Daten erfolgt in Rechenzentren innerhalb der <strong>Europäischen Union</strong>. Da Google LLC ein US-amerikanisches Unternehmen ist, kann jedoch in Ausnahmefällen (z.B. technischer Support, Administration) ein Zugriff aus den USA technisch nicht vollständig ausgeschlossen werden.
+        Die Speicherung Ihrer personenbezogenen Daten erfolgt vorrangig in Rechenzentren innerhalb der <strong>Europäischen Union</strong>. Bei den eingesetzten US-Anbietern kann ein Zugriff aus den USA (z.B. für technischen Support oder Administration) technisch nicht vollständig ausgeschlossen werden.
     </p>
     <p>
-        Für diesen Fall stützen wir uns auf folgende Garantien:
+        Für diese Fälle stützen wir uns auf folgende Garantien:
     </p>
     <ul>
         <li><strong>EU-US Data Privacy Framework (DPF):</strong> Google LLC ist unter dem EU-US Data Privacy Framework zertifiziert, für das ein Angemessenheitsbeschluss der EU-Kommission gemäß Art. 45 DSGVO besteht.</li>
-        <li><strong>EU-Standardvertragsklauseln (SCCs):</strong> Ergänzend sind im Google Cloud Data Processing Addendum EU-Standardvertragsklauseln gemäß Art. 46 Abs. 2 lit. c DSGVO enthalten.</li>
+        <li><strong>EU-Standardvertragsklauseln (SCCs):</strong> Mit RevenueCat, Inc. und Amplitude, Inc. sind EU-Standardvertragsklauseln gemäß Art. 46 Abs. 2 lit. c DSGVO vereinbart. Ergänzend sind auch im Google Cloud Data Processing Addendum Standardvertragsklauseln enthalten.</li>
     </ul>
 
     <h2>9. Nutzung durch Minderjährige</h2>
     <p>
         Die App ist für Nutzer ab <strong>13 Jahren</strong> bestimmt. Personen unter 16 Jahren benötigen für die Erteilung der Einwilligung in die Verarbeitung ihrer Daten (insb. für Analytics) gemäß Art. 8 DSGVO die Zustimmung der Erziehungsberechtigten. Mit der Nutzung der App bestätigen Sie, dass Sie mindestens 16 Jahre alt sind oder die Zustimmung Ihrer Erziehungsberechtigten eingeholt haben.
+    </p>
+    <p>
+        In-App-Käufe können auf den Geräten über die Familienfreigabe- und Jugendschutz-Einstellungen von Apple beziehungsweise Google eingeschränkt oder vollständig deaktiviert werden.
     </p>
 
     <h2>10. Ihre Rechte als betroffene Person</h2>
@@ -227,6 +280,9 @@
     </ul>
     <p>
         Zur Geltendmachung Ihrer Rechte genügt eine formlose E-Mail an <a href="mailto:daniel.defiebre@gurusense.de">daniel.defiebre@gurusense.de</a>.
+    </p>
+    <p>
+        <strong>Hinweis zu Käufen:</strong> Anfragen zu Rückerstattungen, Rechnungen oder Zahlungsvorgängen richten Sie bitte direkt an Apple beziehungsweise Google, da diese Unternehmen Ihre Vertragspartner für den Kauf sind.
     </p>
 
     <h2>11. Beschwerderecht bei der Aufsichtsbehörde</h2>
@@ -245,7 +301,7 @@
         Wir behalten uns vor, diese Datenschutzerklärung anzupassen, um sie an geänderte Rechtslagen oder bei Änderungen des Dienstes anzupassen. Die jeweils aktuelle Fassung finden Sie stets in der App und auf unserer Website.
     </p>
 
-    <p class="legal-note">Stand: 18.05.2026</p>
+    <p class="legal-note">Stand: 29.07.2026</p>
 
 </body>
 </html>
