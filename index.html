@@ -143,14 +143,38 @@
     <h3>4.3. Multiplayer und Duelle</h3>
     <p>Für die Durchführung von Duellen und Multiplayer-Partien verarbeiten wir:</p>
     <ul>
-        <li>Zuordnung von Gegnerinnen und Gegnern (Matchmaking)</li>
+        <li>Zuordnung der beiden Teilnehmer einer Partie (über Lobby-Code oder Einladung; eine Zufallszuordnung fremder Personen gibt es nicht)</li>
         <li>Spielzüge und Antworten innerhalb einer Partie</li>
         <li>Ergebnisse und Spielverlauf</li>
     </ul>
     <p>Die Spielzüge sind nur für die jeweiligen Teilnehmer einer Partie sichtbar.</p>
     <p><strong>Rechtsgrundlage:</strong> Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO).</p>
 
-    <h3>4.4. In-App-Käufe (RevenueCat, Apple, Google)</h3>
+    <h3>4.4. Nachrichten im Duell-Gespräch</h3>
+    <p>
+        Wer gegen einen anderen Menschen spielt, kann ihm in der Lobby, in den Rundenpausen und am Endstand freiwillig Nachrichten schreiben. Dabei verarbeiten wir den Nachrichtentext, den Sendezeitpunkt und die Nutzerkennungen beider Teilnehmer. Der Server speichert die Zugehörigkeit zur jeweiligen Partie, damit nur deren Teilnehmer die Nachrichten lesen, melden und den Partner sperren können.
+    </p>
+    <p>
+        Nachrichtentexte nehmen wir nicht in Analyse-Ereignisse oder Fehlerprotokolle auf. Angenommene Nachrichten und die Teilnehmerzuordnung werden drei Tage nach der ersten Nachricht des Gesprächs beim darauffolgenden nächtlichen Aufräumen gelöscht. Eine Meldung speichert den Originaltext und die Kennungen von Absender und meldender Person zur Prüfung durch den Support; sie wird nach 30 Tagen gelöscht. Bei einer Kontolöschung werden auch zugehörige Gespräche und Meldungen entfernt.
+    </p>
+    <p><strong>Rechtsgrundlage:</strong> Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO).</p>
+
+    <h3>4.5. Nachrichten an den KI-Gegner (Google Gemini)</h3>
+    <p>
+        Wer allein gegen den Computer spielt, kann dem KI-Gegner am Endstand schreiben. Er antwortet nur auf Ihre Nachricht, beginnt selbst kein Gespräch und sagt auf Nachfrage, dass er eine KI ist. <strong>Bevor die erste Nachricht übertragen wird, fragt die App Sie ausdrücklich, ob Ihre Nachrichten dafür an Google gesendet werden dürfen („Erlauben“ oder „Nicht erlauben“).</strong> Ohne Ihre Erlaubnis wird nichts übertragen; der Gegner beantwortet dann keine Nachrichten. Ihre Entscheidung können Sie jederzeit im Profil unter „KI-Gegner antwortet im Chat“ ändern.
+    </p>
+    <p>
+        Damit die Antwort zur Partie passt, schickt die App mit Ihrer Nachricht: Ihren Anzeigenamen, die gespielten Fragen mit beiden Antworten, den Goldstand je Runde, Name und Stärke des Gegners, die App-Sprache und die letzten zwölf Nachrichten dieses Gesprächs.
+    </p>
+    <p>
+        Unser Server gibt diese Angaben an <strong>Gemini</strong> weiter, ein KI-Modell von Google Cloud (Vertex AI, Google Cloud EMEA Ltd. / Google Ireland Limited), das die Antwort schreibt. Google verarbeitet sie als unser Auftragsverarbeiter in Rechenzentren der EU und verwendet sie nicht zum Training seiner Modelle. Zur Beschleunigung kann Google Eingaben bis zu 24 Stunden im Arbeitsspeicher vorhalten und sie nach den Google-Cloud-Bedingungen zur Erkennung von Missbrauch protokollieren. Wir selbst speichern weder Nachrichten noch Antworten: Sie bestehen auf unserem Server nur, solange die Antwort entsteht, und auf Ihrem Gerät, bis Sie die Partie verlassen. Nachrichtentexte stehen nicht in Analyse-Ereignissen oder Fehlerprotokollen.
+    </p>
+    <p>
+        Ein Inhaltsfilter hält unpassende Texte zurück; dann antwortet der Gegner nicht. Gegen Missbrauch zählt der Server je Konto, wie viele Nachrichten in einer Minute und an einem Tag eingehen – ohne Inhalt und nur im Arbeitsspeicher. Bitte schreiben Sie keine persönlichen Angaben wie Adresse oder Telefonnummer in das Gespräch.
+    </p>
+    <p><strong>Rechtsgrundlage:</strong> Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO) für die Gesprächsfunktion, die Sie nach Ihrer Erlaubnis in der App nutzen.</p>
+
+    <h3>4.6. In-App-Käufe (RevenueCat, Apple, Google)</h3>
     <p>
         In der App können Sie zusätzliche Fragen-Kategorien als einmaligen Kauf oder mit dem Monatsabo „QuizYou Plus“ freischalten. Der Kaufvorgang selbst wird <strong>nicht von uns</strong> abgewickelt, sondern über die Zahlungssysteme der jeweiligen App-Store-Betreiber:
     </p>
@@ -239,6 +263,7 @@
     <p>Zur Erbringung unserer Dienste setzen wir folgende Auftragsverarbeiter ein, mit denen jeweils ein Vertrag zur Auftragsverarbeitung gemäß Art. 28 DSGVO geschlossen wurde:</p>
     <ul>
         <li><strong>Google Cloud / Google LLC</strong> (USA, zertifiziert unter dem EU-US Data Privacy Framework) – Cloud-Hosting, Firebase Authentication, Cloud Firestore, Realtime Database, Firebase Analytics, Firebase Crashlytics. Datenspeicherung in der EU (Frankfurt am Main).</li>
+        <li><strong>Google Cloud Vertex AI (Gemini)</strong> – Erzeugen der Antworten des KI-Gegners, nur nach Ihrer Zustimmung in der App; Verarbeitung in der EU, kein Training mit Ihren Eingaben.</li>
         <li><strong>RevenueCat, Inc.</strong> (USA) – Prüfung von Kaufbelegen und Verwaltung freigeschalteter Inhalte.</li>
         <li><strong>Amplitude, Inc.</strong> (USA) – Auswertung von Nutzungsereignissen, Datenspeicherung im EU-Rechenzentrum.</li>
     </ul>
@@ -301,7 +326,7 @@
         Wir behalten uns vor, diese Datenschutzerklärung anzupassen, um sie an geänderte Rechtslagen oder bei Änderungen des Dienstes anzupassen. Die jeweils aktuelle Fassung finden Sie stets in der App und auf unserer Website.
     </p>
 
-    <p class="legal-note">Stand: 01.11.2026</p>
+    <p class="legal-note">Stand: 03.11.2026</p>
 
 </body>
 </html>
